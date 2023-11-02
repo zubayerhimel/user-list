@@ -1,9 +1,10 @@
-import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
 
-const GuestLayout = () => {
+const GuestLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='flex items-center justify-center h-full'>
-      <Outlet />
+    <div className='flex flex-col'>
+      <Header />
+      {children}
     </div>
   );
 };
